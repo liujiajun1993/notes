@@ -1,1 +1,1 @@
-# notes
+Reading notes of books, not limited in CS area.
