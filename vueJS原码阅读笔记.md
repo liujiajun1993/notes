@@ -45,6 +45,23 @@ initMethods将methods中的所有方法bind到当前实例
 initWatch处理构造函数中的**watch**属性，通过调用createWatcher方法，将响应函数（或响应函数array）绑定到对应data属性上。原理是新建一个**Watcher实例**。
 
 ### 1.2 stateMixin
+好吧我没看懂这是要干嘛。具体说来就是定义了Vue.prototype中的$set, $delete, $watch, $data等方法和属性
+
+### 1.3 eventsMixin
+定义了原型中的on/once/off/emit等方法，都是基于vm._events队列进行
+**vm._events[event]**存储触发event事件时的所有响应函数
+
+### 1.4 lifecycleMixin
+定义了\_mount/\_update/\_updateFromParent/$forceUpdate/$destroy等方法
+\_mount函数中，**beforeMount**状态和**mounted**状态之间，只相差vm._watcher的新建
+\_update函数中，**beforeUpdate**和**updated**状态之间，只相差DOM树根据属性变化进行更新的\__patch函数，该函数从createPatchFunction中演变而来，包含createElm等函数实现DOM树操作。
+\_updateFromParent
+\_forceUpdate强制vm._watcher更新
+\_destroy函数中，**beforeDestroy**和**destroyed**状态之间，相差从父组件中移除依赖，删除watcher，取消事件绑定，调用\__patch更新DOM树等操作
+
+
+### 1.5 renderMixin
+利用渲染函数将数据渲染为DOM树结构
 
 ## Observer
 ## Watcher
