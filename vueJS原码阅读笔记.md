@@ -61,7 +61,10 @@ initWatch处理构造函数中的**watch**属性，通过调用createWatcher方�
 
 
 ### 1.5 renderMixin
-利用渲染函数将数据渲染为DOM树结构
+利用渲染函数将数据渲染为v-tree结构(虚拟树)
 
 ## Observer
+将要观察的object的所有属性转换为getter、setter方法，同时管理其依赖，并分发其update事件。
+set方法中，使用dep.notify()方法【参考Dep类】，把value的update状态通知给所有依赖于它的对象。
+
 ## Watcher
