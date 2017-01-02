@@ -1,0 +1,20 @@
+html,body,.markdown {
+  font-family: "monaco", "SimSun", "STKaiTi", "Microsoft Yahei", "Meiryo UI", "Malgun Gothic", "Segoe UI", "Trebuchet MS", Helvetica, sans-serif !important;
+}
+/* 用于章节中的小标题 */
+em{
+	color: #f00;
+	font-weight: 700;
+}
+
+/* 用于章节中的小小标题 */
+mark{
+	color: #f00;
+	background: transparent;
+}
+
+/** 用于描述中的突出 */
+span{
+	color: #00f;
+	display: inline;
+}
