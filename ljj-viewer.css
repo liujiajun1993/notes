@@ -5,6 +5,7 @@ html,body,.markdown {
 em{
 	color: #f00;
 	font-weight: 700;
+	font-style: normal;
 }
 
 /* 用于章节中的小小标题 */
