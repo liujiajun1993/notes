@@ -3,18 +3,18 @@ html,body,.markdown {
 }
 
 /* 自定义突出标签*/
-// 用于章节中的小标题
+/* 用于章节中的小标题 */
 em{
 	color: #f00;
 	font-weight: 700;
 	font-style: normal;
 }
-// 用于章节中的小小标题
+/* 用于章节中的小小标题 */
 mark{
 	color: #f00;
 	background: transparent;
 }
-// 用于描述中的突出
+/* 用于描述中的突出 */
 span{
 	color: #00f;
 	display: inline;
